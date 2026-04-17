@@ -1,20 +1,25 @@
 # algoritmos-castellanos-post1-u6
 
-Laboratorio de Diseño de Algoritmos y Sistemas, Unidad 6.
+Laboratorio de Diseno de Algoritmos y Sistemas, Unidad 6.
 
-Este proyecto implementa en Java 21 los algoritmos:
+## Descripcion
 
-- Knapsack 0/1 con tabla completa DP y reconstrucción.
+Proyecto en Java 21 para implementar y comparar algoritmos de programacion dinamica (DP).
+
+## Algoritmos implementados
+
+- Knapsack 0/1 con tabla completa DP y reconstruccion.
 - Knapsack Unbounded con DP 1D.
 - Knapsack 0/1 optimizado en memoria con DP 1D.
-- Weighted Interval Scheduling con cálculo de p(j) por búsqueda binaria, DP y reconstrucción de trabajos.
+- Weighted Interval Scheduling con calculo de p(j) por busqueda binaria, DP y reconstruccion de trabajos.
 
-## Estructura
+## Estructura del proyecto
 
 ```text
 algoritmos-castellanos-post1-u6/
 ├── capturas/
-│   └── .gitkeep
+│   └── test-verde.png
+│   └── benchmark.png
 ├── src/
 │   ├── main/
 │   │   └── java/
@@ -38,15 +43,15 @@ algoritmos-castellanos-post1-u6/
 - Java 17+ (probado con Java 21)
 - Maven 3.9+
 
-## Comandos de ejecución
+## Ejecucion
 
-Compilar y correr pruebas:
+### Compilar y ejecutar pruebas
 
 ```powershell
 mvn clean test
 ```
 
-Ejecutar benchmarks JMH en PowerShell:
+### Ejecutar benchmarks JMH (PowerShell)
 
 ```powershell
 mvn --% exec:java -Dexec.mainClass=org.openjdk.jmh.Main
@@ -56,9 +61,9 @@ Nota: en PowerShell se usa --% para que -Dexec.mainClass no sea reinterpretado p
 
 ## Resultados JMH
 
-Unidad: microsegundos por operación (us/op), modo promedio.
+Unidad: microsegundos por operacion (us/op), modo promedio.
 
-| Metodo                    |                  Tamano | Score (us/op) | Error (99.9%) |
+| Metodo                    |                  Tamaño | Score (us/op) | Error (99.9%) |
 | ------------------------- | ----------------------: | ------------: | ------------: |
 | solve01 (bench01)         |   SMALL (n=100, W=1000) |       103.977 |         5.795 |
 | solve01 (bench01)         |  MEDIUM (n=500, W=5000) |      2698.016 |       149.747 |
